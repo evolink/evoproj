@@ -1,0 +1,108 @@
+UNKNOWN {
+	MARGIN: 0px
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 120%; FONT-FAMILY: "Tahoma","ËÎÌו"
+}
+.input {
+	BORDER-RIGHT: #585a67 1px solid; BORDER-TOP: #585a67 1px solid; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/images/inputback.gif); BORDER-LEFT: #585a67 1px solid; BORDER-BOTTOM: #585a67 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+.topline {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; MARGIN: 3px 5px; BORDER-LEFT: 0px; WIDTH: 10px; BORDER-BOTTOM: 0px; HEIGHT: 32px
+}
+.clear {
+	LINE-HEIGHT: 180%
+}
+.supersock {
+	LINE-HEIGHT: 200%
+}
+.eng {
+	FONT-SIZE: 10px; FONT-FAMILY: "Arial"
+}
+.bigfont {
+	FONT-SIZE: 14px; FONT-FAMILY: "Tahoma"
+}
+A:active {
+	COLOR: #0d0d15; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0d0d15; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0066cc; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #0d0d15; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: none
+}
+.cleargray {
+	COLOR: #333333; LINE-HEIGHT: 180%
+}
+.englink {
+	FONT-SIZE: 10px
+}
+.white {
+	COLOR: #ffffff
+}
+.highlight {
+	FONT-WEIGHT: bold; COLOR: #ffcc00
+}
+.super {
+	FONT-WEIGHT: 900; FONT-SIZE: 18px; COLOR: #ff0000; FONT-FAMILY: "Tahoma"
+}
+A.blue:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003399; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: underline
+}
+A.blue:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003399; FONT-FAMILY: "Tahoma"
+}
+A.blue:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #0066cc; FONT-FAMILY: "Tahoma"
+}
+A.blue:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003399; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: underline
+}
+A.slim:active {
+	COLOR: #0066cc
+}
+A.slim:visited {
+	COLOR: #0066cc
+}
+A.slim:hover {
+	COLOR: #ff6600
+}
+A.slim:link {
+	COLOR: #0066cc
+}
+A.search:active {
+	COLOR: #333333
+}
+A.search:visited {
+	COLOR: #333333
+}
+A.search:hover {
+	COLOR: #333333
+}
+A.search:link {
+	COLOR: #333333
+}
+A.top:visited {
+	COLOR: #ffffff; FONT-FAMILY: "Tahoma"
+}
+A.top:link {
+	COLOR: #ffffff; FONT-FAMILY: "Tahoma"
+}
+A.top:hover {
+	COLOR: #d1ff66; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: underline
+}
+A.move:hover {
+	LEFT: 1px; POSITION: relative; TOP: 1px
+}
+.formstyle {
+	BORDER-RIGHT: #a8aab9 1px solid; BORDER-TOP: #585a67 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #585a67 1px solid; BORDER-BOTTOM: #a8aab9 1px solid
+}
+.mainbutton {
+	BORDER-RIGHT: #111111 1px solid; BORDER-TOP: #111111 1px solid; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/images/button.jpg); BORDER-LEFT: #111111 1px solid; BORDER-BOTTOM: #111111 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+.supersock {
+	LINE-HEIGHT: 200%
+}

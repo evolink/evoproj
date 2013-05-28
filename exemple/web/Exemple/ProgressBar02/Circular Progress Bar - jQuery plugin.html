@@ -1,0 +1,429 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	  <title>Circular Progress Bar - jQuery plugin</title>
+	  <link rel="stylesheet" href="Circular%20Progress%20Bar%20-%20jQuery%20plugin_fichiers/stylesheet.css" type="text/css" charset="utf-8">
+	  <link type="text/css" href="Circular%20Progress%20Bar%20-%20jQuery%20plugin_fichiers/jquery-ui-1.css" rel="stylesheet">
+	  <script src="Circular%20Progress%20Bar%20-%20jQuery%20plugin_fichiers/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="Circular%20Progress%20Bar%20-%20jQuery%20plugin_fichiers/jquery-1.js"></script>
+	  <script type="text/javascript" src="Circular%20Progress%20Bar%20-%20jQuery%20plugin_fichiers/jquery-ui-1.js"></script>
+	  <script src="Circular%20Progress%20Bar%20-%20jQuery%20plugin_fichiers/jCProgress-1.js" type="text/javascript"></script>
+
+	  <style type="text/css" media="screen">	      
+	       .jCProgress {
+		    position: absolute;
+		    z-index: 99999999;
+		    /*  margin-top:-15px;*/
+	       }
+	       .jCProgress > div.percent {
+		    font: 18px/27px 'BebasRegular', Arial, sans-serif;
+		    color:#ebebeb;
+		    text-shadow: 1px 1px 1px #1f1f1f;
+
+		    position:absolute;
+		    margin-top:40px;
+		    margin-left:22px;
+		    text-align: center;
+		    width:60px;
+	       }
+	  </style>
+	  <script type="text/javascript">
+	       $(document).ready(function(){
+
+		    options = {
+				   img1: 'images/v1.png',
+				   img2: 'images/v2.png',				   
+				   speed: 50,			   
+				   percent: 10,
+				   limit: 70,
+				   onInit: function(){console.log('init');},
+				   onProgress: function(p){/*console.log('progress',p);*/},
+				   onComplete: function(p){console.log('complete',p);}
+			      };
+
+		    myplugin = $('#p1').cprogress(options);
+		    var myplugin;
+
+		    $('#create').click(function(){
+			 if(!myplugin){
+			      myplugin = $('#p1').cprogress(options);
+			 }
+		    });
+
+		    $('#destroy').click(function(){
+			 if(myplugin){
+			      myplugin=myplugin.destroy();
+			 }
+		    });
+
+		    $('#play').click(function(){
+			 if(myplugin){
+			      myplugin.start();
+			 }
+		    });
+
+		    $('#pause').click(function(){
+			 if(myplugin){
+			      myplugin.stop();
+			 }
+		    });
+
+		    $('#reset').click(function(){
+			 if(myplugin){
+			      myplugin.reset();
+			 }
+		    });
+
+		    $('#speed10').click(function(){
+			 if(myplugin){
+			      myplugin.options({speed: 10});
+			 }
+		    });
+		    $('#speed23').click(function(){
+			 if(myplugin){
+			      myplugin.options({speed: 23.8732415});
+			 }
+		    });
+
+		    $('#speed50').click(function(){
+			 if(myplugin){
+			      myplugin.options({speed: 50});
+			 }
+		    });
+
+		    $('#speed100').click(function(){
+			 if(myplugin){
+			      myplugin.options({speed: 100});
+			 }
+		    });
+
+		    $('#showp').click(function(){
+			 if(myplugin){
+			      myplugin.options({showPercent: true});
+			 }
+		    });
+
+		    $('#hidep').click(function(){
+			 if(myplugin){
+			      myplugin.options({showPercent: false});
+			 }
+		    });
+
+		    $('#limit20').click(function(){
+			 if(myplugin){
+			      myplugin.options({limit: 20});
+			 }
+		    });
+		    $('#limit50').click(function(){
+			 if(myplugin){
+			      myplugin.options({limit: 50});
+			 }
+		    });
+		    $('#limit100').click(function(){
+			 if(myplugin){
+			      myplugin.options({limit: 100});
+			 }
+		    });
+		    $('#limit120').click(function(){
+			 if(myplugin){
+			      myplugin.options({limit: 120});
+			 }
+		    });
+
+		    $('#pistep05').click(function(){
+			 if(myplugin){
+			      myplugin.options({PIStep: 0.05});
+			 }
+		    });
+		    $('#pistep10').click(function(){
+			 if(myplugin){
+			      myplugin.options({PIStep: 0.10});
+			 }
+		    });
+		    $('#pistep15').click(function(){
+			 if(myplugin){
+			      myplugin.options({PIStep: 0.15});
+			 }
+		    });
+
+		    $('#goto20').click(function(){
+			 if(myplugin){
+			      goToOptions = {
+				   speed: 1,
+				   // PIStep: 0.15,
+				   stop: 0,
+				   limit: 20
+			      }
+			      //oldOptions = myplugin.options();
+			      myplugin.options(goToOptions)
+			 }
+		    });
+		    $('#goto50').click(function(){
+			 if(myplugin){
+			      goToOptions = {
+				   speed: 1,
+				   // PIStep: 0.15,
+				   stop: 0,
+				   limit: 50
+			      }
+			      //oldOptions = myplugin.options();
+			      myplugin.options(goToOptions)
+			 }
+		    });
+		    $('#goto100').click(function(){
+			 if(myplugin){
+			      goToOptions = {
+				   speed: 1,
+				   //PIStep: 0.15,
+				   stop: 0,
+				   limit: 100
+			      }
+			      //oldOptions = myplugin.options();
+			      myplugin.options(goToOptions)
+			 }
+		    });
+
+		    $('#skin1').click(function(){
+			 if(myplugin){
+			      skinOptions = {
+				   img1: 'v1.png',
+				   img2: 'v2.png'
+			      }
+			      myplugin.options(skinOptions)
+			 }
+		    });
+		    $('#skin2').click(function(){
+			 if(myplugin){
+			      skinOptions = {
+				   img1: 'c1.png',
+				   img2: 'c3.png'
+			      }
+			      myplugin.options(skinOptions)
+			 }
+		    });
+		    $('#skin3').click(function(){
+			 if(myplugin){
+			      skinOptions = {
+				   img1: 'x.png',
+				   img2: 'x2.png',
+				   showPercent: false
+			      }
+			      myplugin.options(skinOptions)
+			 }
+		    });
+
+		    //hover states on the static widgets
+		    $('.button').hover(
+		    function() { $(this).addClass('ui-state-hover'); },
+		    function() { $(this).removeClass('ui-state-hover'); }
+	       );
+
+	       });
+	  </script>
+
+	  <script type="text/javascript">
+
+	       var _gaq = _gaq || [];
+	       _gaq.push(['_setAccount', 'UA-1652558-7']);
+	       _gaq.push(['_setDomainName', '.ar2oor.pl']);
+	       _gaq.push(['_trackPageview']);
+	       
+	       (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	       })();
+
+	  </script>
+     </head>
+     <body>
+
+	  <div class="container">
+	       <div class="content">
+		    <div class="head">
+			 <h1>CProgress</h1>
+			 <h2>jQuery circular progress bar</h2>
+		    </div>
+		    <div class="all">
+			 <h2 class="small">demo</h2>
+			 <div class="info">
+			      <p>
+				   <span id="create" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-plus"></span>create</span>
+				   <span id="destroy" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-minus"></span>destroy</span>
+			      </p>
+			      <p>
+				   <span id="play" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-play"></span>play</span>
+				   <span id="pause" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-pause"></span>stop</span>
+				   <span id="reset" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-close"></span>reset</span>
+			      </p>
+			      <p>
+				   <span id="speed10" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-seek-next"></span>speed 10</span>
+				   <span id="speed23" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-seek-next"></span>speed 23.89</span>
+				   <span id="speed50" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-seek-next"></span>speed 50</span>
+				   <span id="speed100" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-seek-next"></span>speed 100</span>
+			      </p>
+			      <p>
+				   <span id="pistep05" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-refresh"></span>PI Step 0.05</span>
+				   <span id="pistep10" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-refresh"></span>PI Step 0.10</span>
+				   <span id="pistep15" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-refresh"></span>PI Step 0.15</span>
+			      </p>
+			      <p>
+				   <span id="showp" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-plus"></span>show percents</span>
+				   <span id="hidep" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-minus"></span>hide percents</span>
+			      </p>
+			      <p>
+				   <span id="limit20" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-bullet"></span>limit 20</span>
+				   <span id="limit50" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-bullet"></span>limit 50</span>
+				   <span id="limit100" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-bullet"></span>limit 100</span>
+				   <span id="limit120" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-bullet"></span>limit 120</span>
+			      </p>
+			      <p>
+				   <span id="goto20" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-seek-end"></span>go to 20</span>
+				   <span id="goto50" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-seek-end"></span>go to 50</span>
+				   <span id="goto100" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-seek-end"></span>go to 100</span>
+			      </p>
+			      <p>
+				   <span id="skin1" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-image"></span>skin #1</span>
+				   <span id="skin2" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-image"></span>skin #2</span>
+				   <span id="skin3" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-image"></span>skin #3</span>
+			      </p>
+			      <p class="skin">
+				   Skin design by <a href="http://www.premiumpixels.com/freebies/circular-progress-bars-psd/">Orman Clark</a>, 
+				   Coded by <a href="http://ar2oor.pl/kontakt">Artur Tomaszewski</a>
+			      </p>
+
+			 </div>
+			 <div id="p1"><div style="margin-left: 137.5px; margin-top: 87.5px; opacity: 1;" class="jCProgress"><div class="percent">51</div><canvas height="105" width="105"></canvas></div></div>
+
+
+			 <h2 class="small">download</h2> 
+			 <div class="big">
+			      <a href="http://p.ar2oor.pl/cprogress/jCProgress-1.0.3.js" class="ui-state-default ui-corner-all button"><span class="ui-icon ui-icon-disk"></span>DOWNLOAD</a> <i style="padding-left:15px;">CProgress 1.0.3 </i>
+			 </div>
+
+			 <h2 class="small">documentation</h2>
+			 <div class="big">
+			      <h3>USAGE</h3>
+			      <code>
+var myplugin;
+$('#target').click(function(){
+     if(!myplugin){
+	  myplugin = $('#p1').cprogress({
+	       percent: 10, // starting position
+	       img1: 'v1.png', // background
+	       img2: 'v2.png', // foreground
+	       speed: 200, // speed (timeout)
+	       PIStep : 0.05, // every step foreground area is bigger about this val
+	       limit: 20, // end value
+	       loop : false, //if true, no matter if limit is set, progressbar will be running
+	       showPercent : true, //show hide percent
+	       onInit: function(){console.log('onInit');},
+	       onProgress: function(p){console.log('onProgress',p);}, //p=current percent
+	       onComplete: function(p){console.log('onComplete',p);}
+	  });
+     }
+});
+			      </code>
+			      <p>By default progressbar is located in the center of target 
+element. You Can offset it using css margin values on .jCProgress css 
+class.</p>
+			      <h3>Functions</h3>
+			      <code>
+// Create
+options = {
+     img1: 'v1.png',
+     img2: 'v2.png',
+     speed: 50,
+     limit: 70,
+
+};
+
+myplugin = $('#p1').cprogress(options);
+
+// Create on Event
+$('#create').click(function(){
+     if(!myplugin){
+	  myplugin = $('#p1').cprogress(options);
+     }
+});
+
+// Destroy
+$('#destroy').click(function(){
+     if(myplugin){
+	  myplugin=myplugin.destroy();
+     }
+});
+
+// Start
+$('#play').click(function(){
+     if(myplugin){
+	  myplugin.start();
+     }
+});
+
+// Stop
+$('#pause').click(function(){
+     if(myplugin){
+	  myplugin.stop();
+     }
+});
+
+// Reset
+$('#reset').click(function(){
+     if(myplugin){
+	  myplugin.reset();
+     }
+});
+
+// Change options (you can change all options, including images)
+$('#speed10').click(function(){
+     if(myplugin){
+	  myplugin.options({speed: 10});
+     }
+});
+			      </code>
+			      <h3>CSS</h3>
+			      <code>
+.jCProgress {
+     position: absolute;
+     z-index: 9999999;
+     /*  margin-top:-15px; /* offset from the center */
+}
+
+.jCProgress &gt; div.percent {
+     font: 18px/27px 'BebasRegular', Arial, sans-serif;
+     color:#ebebeb;
+     text-shadow: 1px 1px 1px #1f1f1f;
+
+     position:absolute;
+     margin-top:40px;
+     margin-left:22px;
+     text-align: center;
+     width:60px;
+}
+
+
+			      </code>
+			      <h3>TODO &amp; Changelog</h3>
+			      <ul>
+				   <li>Version 1.0.3 released, fixed starting position on options={percent: value,..}</li>
+				   <li>Version 1.0.2 released, fixed drawing other sizes</li>
+				   <li>Version 1.0.1 released, fixed image loading</li>
+				   <li>Background div on created element</li>
+				   <li>Real life demo</li>
+			      </ul>
+			      <h3>License</h3>
+			      <p>Plugin is distributed undet MIT license.</p>
+			 </div>
+		    </div>
+
+
+
+
+		    <div style="clear:both;"></div>
+
+	       </div>
+	  </div>
+
+
+     
+
+</body></html>
